@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Book_Management
+namespace ProgramForm
 {
-    public partial class Form1 : Form
+    public partial class RentalUserList : Form
     {
-        public Form1()
+        public RentalUserList()
         {
             InitializeComponent();
         }

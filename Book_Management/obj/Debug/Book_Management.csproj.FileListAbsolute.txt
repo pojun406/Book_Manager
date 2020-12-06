@@ -1,0 +1,10 @@
+D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csprojAssemblyReference.cache
+D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.exe.config
+D:\Git\Book_Manager\Book_Management\obj\Debug\ProgramForm.AdminForm.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\ProgramForm.BookManagement.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\ProgramForm.LoginForm.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.Properties.Resources.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\ProgramForm.RentalUserList.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\ProgramForm.UserForm.resources
+D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.GenerateResource.cache
+D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CoreCompileInputs.cache
