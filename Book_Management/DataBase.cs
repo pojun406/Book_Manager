@@ -9,20 +9,43 @@ using System.Threading.Tasks;
 
 namespace Book_Management
 {
-    class DataBase
+    class Data_Base
     {
-        public static SqlConnection conn = new SqlConnection();
-        public static DataSet ds = new DataSet();
-        public static DataTable dt_book;
-        public static DataTable dt_user;
+        public SqlConnection conn = new SqlConnection();
+        string strConn = "Server=127.0.0.1;Port=3307;Database=book_management;Uid=root;Pwd=123123;";
 
-        public static void ConnectDB()
+        public void ConnectDB()
         {
-            conn.ConnectionString = "Server=127.0.0.1;Port=3307;Database=book_management;Uid=root;Pwd=123123;";
+            conn.ConnectionString = strConn;
             conn = new SqlConnection(conn.ConnectionString);
-            conn.Open();
+            conn.Open(); 
         }
 
+        public void CloseDB()
+        {
+            if(conn != null)
+            {
+                conn.Close();
+            }
+        }
+
+
+        public DataSet GetBookList()
+        {
+            DataSet ds = new DataSet();
+
+            SqlConnection conn = new SqlConnection(strConn);
+            conn.Open();
+
+            string sql = "SELECT * FROM book_list ORDER BY BOOK_NUM DESC;";
+
+            SqlDataAdapter adapter = new SqlDataAdapter(sql, conn);
+
+            adapter.Fill(ds);
+            conn.Close();
+
+            return ds;
+        }
 
     }
 }

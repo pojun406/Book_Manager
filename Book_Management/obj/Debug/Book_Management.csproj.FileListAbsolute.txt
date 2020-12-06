@@ -22,7 +22,6 @@ D:\Git\Book_Manager\Book_Management\bin\Debug\System.Memory.dll
 D:\Git\Book_Manager\Book_Management\bin\Debug\System.Buffers.dll
 D:\Git\Book_Manager\Book_Management\bin\Debug\K4os.Compression.LZ4.dll
 D:\Git\Book_Manager\Book_Management\bin\Debug\K4os.Hash.xxHash.dll
-D:\Git\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll
 D:\Git\Book_Manager\Book_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 D:\Git\Book_Manager\Book_Management\bin\Debug\MySql.Data.xml
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CopyComplete

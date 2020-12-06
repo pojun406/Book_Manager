@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Book_Management;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,14 @@ namespace ProgramForm
         public RentalUserList()
         {
             InitializeComponent();
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            Data_Base database = new Data_Base();
+            DataSet dataset = database.GetBookList();
+
+            dataGridView1.DataSource = dataset.Tables[0];
         }
     }
 }
