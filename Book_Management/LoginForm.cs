@@ -12,7 +12,7 @@ namespace ProgramForm
 {
     public partial class LoginForm : Form
     {
-        public static String username;
+        public static string username;
 
         public LoginForm()
         {
