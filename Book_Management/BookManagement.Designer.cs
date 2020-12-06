@@ -30,6 +30,8 @@
         {
             this.data_BookList = new System.Windows.Forms.DataGridView();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.btn_DelBook = new System.Windows.Forms.Button();
+            this.btn_AddBook = new System.Windows.Forms.Button();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
@@ -38,9 +40,6 @@
             this.label2 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btn_AddBook = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.btn_DelBook = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_BookList)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -58,7 +57,6 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_DelBook);
-            this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.btn_AddBook);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.label4);
@@ -74,6 +72,24 @@
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "도서목록관리";
+            // 
+            // btn_DelBook
+            // 
+            this.btn_DelBook.Location = new System.Drawing.Point(194, 261);
+            this.btn_DelBook.Name = "btn_DelBook";
+            this.btn_DelBook.Size = new System.Drawing.Size(110, 43);
+            this.btn_DelBook.TabIndex = 10;
+            this.btn_DelBook.Text = "삭제";
+            this.btn_DelBook.UseVisualStyleBackColor = true;
+            // 
+            // btn_AddBook
+            // 
+            this.btn_AddBook.Location = new System.Drawing.Point(46, 261);
+            this.btn_AddBook.Name = "btn_AddBook";
+            this.btn_AddBook.Size = new System.Drawing.Size(110, 43);
+            this.btn_AddBook.TabIndex = 8;
+            this.btn_AddBook.Text = "추가";
+            this.btn_AddBook.UseVisualStyleBackColor = true;
             // 
             // textBox4
             // 
@@ -139,34 +155,6 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "ISBN";
             // 
-            // btn_AddBook
-            // 
-            this.btn_AddBook.Location = new System.Drawing.Point(31, 314);
-            this.btn_AddBook.Name = "btn_AddBook";
-            this.btn_AddBook.Size = new System.Drawing.Size(110, 43);
-            this.btn_AddBook.TabIndex = 8;
-            this.btn_AddBook.Text = "추가";
-            this.btn_AddBook.UseVisualStyleBackColor = true;
-            // 
-            // label5
-            // 
-            this.label5.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label5.Location = new System.Drawing.Point(31, 215);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(272, 81);
-            this.label5.TabIndex = 9;
-            this.label5.Text = "label5";
-            // 
-            // btn_DelBook
-            // 
-            this.btn_DelBook.Location = new System.Drawing.Point(193, 314);
-            this.btn_DelBook.Name = "btn_DelBook";
-            this.btn_DelBook.Size = new System.Drawing.Size(110, 43);
-            this.btn_DelBook.TabIndex = 10;
-            this.btn_DelBook.Text = "삭제";
-            this.btn_DelBook.UseVisualStyleBackColor = true;
-            // 
             // BookManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -197,7 +185,6 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btn_DelBook;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Button btn_AddBook;
     }
 }
