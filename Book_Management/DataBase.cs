@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace Book_Management
 {
     class DataBase
@@ -17,9 +18,11 @@ namespace Book_Management
 
         public static void ConnectDB()
         {
-            conn.ConnectionString = string.Format("Data Source=127.0.0.1,3307;Initial Catalog=book_management;User ID=root;Password=123123;");
+            conn.ConnectionString = "Server=127.0.0.1;Port=3307;Database=book_management;Uid=root;Pwd=123123;";
             conn = new SqlConnection(conn.ConnectionString);
             conn.Open();
         }
+
+
     }
 }
