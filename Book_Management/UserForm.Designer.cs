@@ -33,6 +33,7 @@
             this.txtbox1 = new System.Windows.Forms.TextBox();
             this.btn_End = new System.Windows.Forms.Button();
             this.btn_Rental = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_booklist)).BeginInit();
             this.SuspendLayout();
             // 
@@ -79,11 +80,22 @@
             this.btn_Rental.Text = "대출";
             this.btn_Rental.UseVisualStyleBackColor = true;
             // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(626, 284);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(99, 55);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "조회";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btn_Rental);
             this.Controls.Add(this.btn_End);
             this.Controls.Add(this.txtbox1);
@@ -105,5 +117,6 @@
         private System.Windows.Forms.TextBox txtbox1;
         private System.Windows.Forms.Button btn_End;
         private System.Windows.Forms.Button btn_Rental;
+        private System.Windows.Forms.Button button1;
     }
 }

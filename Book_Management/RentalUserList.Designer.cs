@@ -30,6 +30,7 @@
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.btnReturn = new System.Windows.Forms.Button();
+            this.btn_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -54,11 +55,21 @@
             this.btnReturn.Text = "반납처리";
             this.btnReturn.UseVisualStyleBackColor = true;
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(640, 282);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(99, 50);
+            this.btn_Search.TabIndex = 2;
+            this.btn_Search.Text = "조회";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            // 
             // RentalUserList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
+            this.Controls.Add(this.btn_Search);
             this.Controls.Add(this.btnReturn);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
@@ -73,5 +84,6 @@
 
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
