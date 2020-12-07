@@ -16,4 +16,15 @@ namespace Book_Management
         public DateTime Rent_Time { get; set; }
         public DateTime Return_Time { get; set; }
     }
+    /*
+    public static string ColumnTitle(string columName)
+    {
+        string sTitle;
+        sTitle = columName;
+        switch (columName)
+        {
+            case "Book_Num": "책 번호"; break;
+        }
+        return sTitle;
+    }*/
 }
