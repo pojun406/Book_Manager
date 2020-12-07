@@ -1,8 +1,11 @@
-﻿using System;
+﻿using Book_Management;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,6 +16,7 @@ namespace ProgramForm
     public partial class LoginForm : Form
     {
         public static string username;
+        Data_Base DB = new Data_Base();
 
         public LoginForm()
         {
@@ -21,7 +25,8 @@ namespace ProgramForm
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
-            
+            DB.ConnectDB();
+            MessageBox.Show("연결완료");
 
             if (txt_login.Text == "admin" && txt_pw.Text == "1234")
             {
