@@ -29,9 +29,10 @@
         private void InitializeComponent()
         {
             this.data_booklist = new System.Windows.Forms.DataGridView();
-            this.lbl_UserInfo = new System.Windows.Forms.Label();
-            this.btnRental = new System.Windows.Forms.Button();
-            this.btnReturn = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.txtbox1 = new System.Windows.Forms.TextBox();
+            this.btn_End = new System.Windows.Forms.Button();
+            this.btn_Rental = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_booklist)).BeginInit();
             this.SuspendLayout();
             // 
@@ -42,60 +43,67 @@
             this.data_booklist.Location = new System.Drawing.Point(40, 130);
             this.data_booklist.Name = "data_booklist";
             this.data_booklist.RowTemplate.Height = 23;
-            this.data_booklist.Size = new System.Drawing.Size(700, 300);
+            this.data_booklist.Size = new System.Drawing.Size(501, 300);
             this.data_booklist.TabIndex = 0;
             // 
-            // lbl_UserInfo
+            // comboBox1
             // 
-            this.lbl_UserInfo.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.lbl_UserInfo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.lbl_UserInfo.Location = new System.Drawing.Point(40, 61);
-            this.lbl_UserInfo.Name = "lbl_UserInfo";
-            this.lbl_UserInfo.Size = new System.Drawing.Size(179, 39);
-            this.lbl_UserInfo.TabIndex = 1;
-            this.lbl_UserInfo.Text = "label1";
-            this.lbl_UserInfo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(40, 57);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(61, 20);
+            this.comboBox1.TabIndex = 1;
             // 
-            // btnRental
+            // txtbox1
             // 
-            this.btnRental.Location = new System.Drawing.Point(274, 61);
-            this.btnRental.Name = "btnRental";
-            this.btnRental.Size = new System.Drawing.Size(73, 39);
-            this.btnRental.TabIndex = 2;
-            this.btnRental.Text = "대출";
-            this.btnRental.UseVisualStyleBackColor = true;
+            this.txtbox1.Location = new System.Drawing.Point(116, 57);
+            this.txtbox1.Name = "txtbox1";
+            this.txtbox1.Size = new System.Drawing.Size(229, 21);
+            this.txtbox1.TabIndex = 2;
             // 
-            // btnReturn
+            // btn_End
             // 
-            this.btnReturn.Location = new System.Drawing.Point(381, 61);
-            this.btnReturn.Name = "btnReturn";
-            this.btnReturn.Size = new System.Drawing.Size(73, 39);
-            this.btnReturn.TabIndex = 2;
-            this.btnReturn.Text = "반납";
-            this.btnReturn.UseVisualStyleBackColor = true;
+            this.btn_End.Location = new System.Drawing.Point(626, 39);
+            this.btn_End.Name = "btn_End";
+            this.btn_End.Size = new System.Drawing.Size(99, 55);
+            this.btn_End.TabIndex = 3;
+            this.btn_End.Text = "종료";
+            this.btn_End.UseVisualStyleBackColor = true;
+            // 
+            // btn_Rental
+            // 
+            this.btn_Rental.Location = new System.Drawing.Point(626, 375);
+            this.btn_Rental.Name = "btn_Rental";
+            this.btn_Rental.Size = new System.Drawing.Size(99, 55);
+            this.btn_Rental.TabIndex = 4;
+            this.btn_Rental.Text = "대출";
+            this.btn_Rental.UseVisualStyleBackColor = true;
             // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(784, 461);
-            this.Controls.Add(this.btnReturn);
-            this.Controls.Add(this.btnRental);
-            this.Controls.Add(this.lbl_UserInfo);
+            this.Controls.Add(this.btn_Rental);
+            this.Controls.Add(this.btn_End);
+            this.Controls.Add(this.txtbox1);
+            this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.data_booklist);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.SizableToolWindow;
             this.Name = "UserForm";
             this.Text = "도서관리프로그램";
             ((System.ComponentModel.ISupportInitialize)(this.data_booklist)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
         private System.Windows.Forms.DataGridView data_booklist;
-        private System.Windows.Forms.Label lbl_UserInfo;
-        private System.Windows.Forms.Button btnRental;
-        private System.Windows.Forms.Button btnReturn;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.TextBox txtbox1;
+        private System.Windows.Forms.Button btn_End;
+        private System.Windows.Forms.Button btn_Rental;
     }
 }

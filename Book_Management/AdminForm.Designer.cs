@@ -29,51 +29,31 @@
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.btnUserDel = new System.Windows.Forms.Button();
             this.btnMake = new System.Windows.Forms.Button();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnBookManage = new System.Windows.Forms.Button();
             this.btnUserCheck = new System.Windows.Forms.Button();
             this.data_UserManage = new System.Windows.Forms.DataGridView();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.data_UserManage)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btnUserDel);
+            this.groupBox1.Controls.Add(this.label3);
+            this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnMake);
             this.groupBox1.Controls.Add(this.textBox2);
             this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Location = new System.Drawing.Point(404, 115);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 298);
+            this.groupBox1.Size = new System.Drawing.Size(366, 158);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USER 가입창";
-            // 
-            // label1
-            // 
-            this.label1.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.label1.Location = new System.Drawing.Point(32, 175);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(216, 61);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "lbl_User";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
-            // 
-            // btnUserDel
-            // 
-            this.btnUserDel.Location = new System.Drawing.Point(279, 176);
-            this.btnUserDel.Name = "btnUserDel";
-            this.btnUserDel.Size = new System.Drawing.Size(60, 60);
-            this.btnUserDel.TabIndex = 1;
-            this.btnUserDel.Text = "삭제";
-            this.btnUserDel.UseVisualStyleBackColor = true;
             // 
             // btnMake
             // 
@@ -114,7 +94,7 @@
             this.btnUserCheck.Name = "btnUserCheck";
             this.btnUserCheck.Size = new System.Drawing.Size(120, 50);
             this.btnUserCheck.TabIndex = 2;
-            this.btnUserCheck.Text = "대출자 확인";
+            this.btnUserCheck.Text = "대출관리";
             this.btnUserCheck.UseVisualStyleBackColor = true;
             this.btnUserCheck.Click += new System.EventHandler(this.btnUserCheck_Click);
             // 
@@ -127,6 +107,24 @@
             this.data_UserManage.RowTemplate.Height = 23;
             this.data_UserManage.Size = new System.Drawing.Size(362, 291);
             this.data_UserManage.TabIndex = 3;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(30, 52);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.TabIndex = 3;
+            this.label2.Text = "이름";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(30, 92);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(53, 12);
+            this.label3.TabIndex = 4;
+            this.label3.Text = "비밀번호";
             // 
             // AdminForm
             // 
@@ -156,7 +154,7 @@
         private System.Windows.Forms.Button btnBookManage;
         private System.Windows.Forms.Button btnUserCheck;
         private System.Windows.Forms.DataGridView data_UserManage;
-        private System.Windows.Forms.Button btnUserDel;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }
