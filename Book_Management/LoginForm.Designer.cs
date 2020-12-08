@@ -43,7 +43,7 @@
             this.txt_ID.Name = "txt_ID";
             this.txt_ID.Size = new System.Drawing.Size(183, 25);
             this.txt_ID.TabIndex = 0;
-            this.txt_ID.TextChanged += new System.EventHandler(this.txt_login_TextChanged);
+            //this.txt_ID.TextChanged += new System.EventHandler(this.txt_login_TextChanged);
             // 
             // txt_PW
             // 
@@ -54,7 +54,7 @@
             this.txt_PW.PasswordChar = '*';
             this.txt_PW.Size = new System.Drawing.Size(182, 25);
             this.txt_PW.TabIndex = 1;
-            this.txt_PW.TextChanged += new System.EventHandler(this.txt_pw_TextChanged);
+            //this.txt_PW.TextChanged += new System.EventHandler(this.txt_pw_TextChanged);
             // 
             // Button_Login
             // 
@@ -100,7 +100,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "LoginForm";
             this.Text = "도서관리프로그램";
-            this.Load += new System.EventHandler(this.LoginForm_Load);
+            //this.Load += new System.EventHandler(this.LoginForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
