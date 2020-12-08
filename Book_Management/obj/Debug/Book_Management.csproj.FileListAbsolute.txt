@@ -56,3 +56,4 @@ C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Mana
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CopyComplete
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.exe
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.pdb
+D:\Git\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll

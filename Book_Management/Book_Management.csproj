@@ -60,7 +60,6 @@
     <Compile Include="BookManagement.Designer.cs">
       <DependentUpon>BookManagement.cs</DependentUpon>
     </Compile>
-    <Compile Include="Data_Base.cs" />
     <Compile Include="LoginForm.cs">
       <SubType>Form</SubType>
     </Compile>
