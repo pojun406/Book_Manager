@@ -32,29 +32,30 @@ namespace ProgramForm
             DataTable dt = new DataTable(); // dataTable 선언
             Conn.Open();
             adpt.Fill(dt);
-            if (txt_ID.Text == "admin" && txt_PW.Text == "1234")
-            {
-                MessageBox.Show("관리자 계정으로 접속합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                AdminForm adminForm = new AdminForm();
-                LoginForm loginForm = new LoginForm();
-                adminForm.Show();
-                loginForm.Close();
-            }
-            else
-            {
                 if (dt.Rows.Count == 1) // 연결된 개수가 1개라면 실행 ( 로그인 성공시 1개 실패시 0개 )
                 {
-                    MessageBox.Show("로그인합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    UserForm userForm = new UserForm();
-                    LoginForm loginForm = new LoginForm();
-                    userForm.Show();
-                    loginForm.Close();
+                    if(txt_ID.Text == "admin")
+                    {
+                        MessageBox.Show("관리자 계정으로 접속합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        AdminForm adminForm = new AdminForm();
+                        LoginForm loginForm = new LoginForm();
+                        adminForm.Show();
+                        loginForm.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("로그인합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        UserForm userForm = new UserForm();
+                        LoginForm loginForm = new LoginForm();
+                        userForm.Show();
+                        loginForm.Close();
+                    }
                 }
                 else
                 {
                     MessageBox.Show("ID와 패스워드를 확인해주세요.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 }
-            }
+            
             Conn.Close();
         }
 

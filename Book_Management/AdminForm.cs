@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace ProgramForm
 {
@@ -38,6 +39,22 @@ namespace ProgramForm
         {
             RentalUserList rentalUserList = new RentalUserList();
             rentalUserList.Show();
+        }
+
+        private void btnMake_Click(object sender, EventArgs e)
+        {
+            string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+            MySqlConnection Conn = new MySqlConnection(myConnection);
+            string query = "INSERT INTO user (USER_NUM, USER_NAME, USER_P_NUM) value(USER_NUM + 1, '" + txt_Name.Text.Trim() + "' , '" + txt_Tel.Text.Trim() + "');";
+            MySqlDataAdapter adpt = new MySqlDataAdapter(query, Conn); // adapter로 쿼리 넘김
+            DataTable dt = new DataTable(); // dataTable 선언
+            Conn.Open();
+            adpt.Fill(dt);
+        }
+
+        private void data_UserManage_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
