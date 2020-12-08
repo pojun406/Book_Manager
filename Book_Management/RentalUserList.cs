@@ -20,10 +20,7 @@ namespace ProgramForm
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            Data_Base database = new Data_Base();
-            DataSet dataset = database.GetBookList();
 
-            dataGridView1.DataSource = dataset.Tables[0];
         }
     }
 }

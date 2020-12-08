@@ -25,7 +25,7 @@ namespace ProgramForm
 
         private void Button_Login_Click(object sender, EventArgs e)
         {
-            DB.ConnectDB();
+
             MessageBox.Show("연결완료");
 
             if (txt_login.Text == "admin" && txt_pw.Text == "1234")

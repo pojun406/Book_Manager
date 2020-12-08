@@ -12,17 +12,25 @@ namespace Book_Management
 {
     class Data_Base
     {
+        /*
+        혹시몰라 백업
         public static SqlConnection conn = new SqlConnection(); // 접속시켜주는 코드
         string strConn = "Server=127.0.0.1;Port=3307;Database=book_management;Uid=root;Pwd=123123;"; // DB정보
 
         public void ConnectDB()
         {
-            conn.ConnectionString = strConn;
-            conn = new SqlConnection(conn.ConnectionString);
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
-            MySqlCommandBuilder cb = new MySqlCommandBuilder(adapter);
-            conn.Open();
-            DataSet ds = new DataSet();
+            try {
+                conn.ConnectionString = strConn;
+                conn = new SqlConnection(conn.ConnectionString);
+                MySqlDataAdapter adapter = new MySqlDataAdapter();
+                MySqlCommandBuilder cb = new MySqlCommandBuilder(adapter);
+                conn.Open();
+                DataSet ds = new DataSet();
+            }
+            catch(Exception e)
+            {
+                string errorcode = e.Message;
+            }
         }
 
         public void CloseDB()
@@ -50,6 +58,6 @@ namespace Book_Management
 
             return ds;
         }
-
+        */
     }
 }
