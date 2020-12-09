@@ -46,6 +46,7 @@
             // 
             // txt_PW
             // 
+            this.txt_PW.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txt_PW.Location = new System.Drawing.Point(60, 94);
             this.txt_PW.MaxLength = 64;
             this.txt_PW.Name = "txt_PW";

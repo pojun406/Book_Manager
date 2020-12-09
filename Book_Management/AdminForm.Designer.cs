@@ -111,7 +111,7 @@
             this.btnMake.Location = new System.Drawing.Point(279, 67);
             this.btnMake.Name = "btnMake";
             this.btnMake.Size = new System.Drawing.Size(60, 60);
-            this.btnMake.TabIndex = 1;
+            this.btnMake.TabIndex = 4;
             this.btnMake.Text = "등록";
             this.btnMake.UseVisualStyleBackColor = true;
             this.btnMake.Click += new System.EventHandler(this.btnMake_Click);
@@ -121,14 +121,14 @@
             this.txt_Tel.Location = new System.Drawing.Point(32, 107);
             this.txt_Tel.Name = "txt_Tel";
             this.txt_Tel.Size = new System.Drawing.Size(216, 21);
-            this.txt_Tel.TabIndex = 0;
+            this.txt_Tel.TabIndex = 3;
             // 
             // txt_Name
             // 
             this.txt_Name.Location = new System.Drawing.Point(32, 67);
             this.txt_Name.Name = "txt_Name";
             this.txt_Name.Size = new System.Drawing.Size(216, 21);
-            this.txt_Name.TabIndex = 0;
+            this.txt_Name.TabIndex = 2;
             // 
             // data_UserManage
             // 
@@ -151,7 +151,7 @@
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             this.tabControl1.Size = new System.Drawing.Size(781, 437);
-            this.tabControl1.TabIndex = 4;
+            this.tabControl1.TabIndex = 1;
             // 
             // tabPage1
             // 
@@ -212,7 +212,7 @@
             this.btn_DelBook.Location = new System.Drawing.Point(194, 261);
             this.btn_DelBook.Name = "btn_DelBook";
             this.btn_DelBook.Size = new System.Drawing.Size(110, 43);
-            this.btn_DelBook.TabIndex = 10;
+            this.btn_DelBook.TabIndex = 7;
             this.btn_DelBook.Text = "삭제";
             this.btn_DelBook.UseVisualStyleBackColor = true;
             // 
@@ -221,7 +221,7 @@
             this.btn_AddBook.Location = new System.Drawing.Point(46, 261);
             this.btn_AddBook.Name = "btn_AddBook";
             this.btn_AddBook.Size = new System.Drawing.Size(110, 43);
-            this.btn_AddBook.TabIndex = 8;
+            this.btn_AddBook.TabIndex = 6;
             this.btn_AddBook.Text = "추가";
             this.btn_AddBook.UseVisualStyleBackColor = true;
             // 
@@ -230,7 +230,7 @@
             this.txt_writer.Location = new System.Drawing.Point(194, 168);
             this.txt_writer.Name = "txt_writer";
             this.txt_writer.Size = new System.Drawing.Size(150, 21);
-            this.txt_writer.TabIndex = 7;
+            this.txt_writer.TabIndex = 5;
             // 
             // label4
             // 
@@ -246,7 +246,7 @@
             this.txt_genre.Location = new System.Drawing.Point(6, 168);
             this.txt_genre.Name = "txt_genre";
             this.txt_genre.Size = new System.Drawing.Size(150, 21);
-            this.txt_genre.TabIndex = 5;
+            this.txt_genre.TabIndex = 4;
             // 
             // label1
             // 
@@ -278,7 +278,7 @@
             this.txt_booknum.Location = new System.Drawing.Point(6, 64);
             this.txt_booknum.Name = "txt_booknum";
             this.txt_booknum.Size = new System.Drawing.Size(338, 21);
-            this.txt_booknum.TabIndex = 1;
+            this.txt_booknum.TabIndex = 2;
             // 
             // label6
             // 
@@ -330,7 +330,7 @@
             this.btn_Search.Location = new System.Drawing.Point(633, 264);
             this.btn_Search.Name = "btn_Search";
             this.btn_Search.Size = new System.Drawing.Size(99, 50);
-            this.btn_Search.TabIndex = 3;
+            this.btn_Search.TabIndex = 2;
             this.btn_Search.Text = "조회";
             this.btn_Search.UseVisualStyleBackColor = true;
             // 
@@ -339,7 +339,7 @@
             this.btn_Return.Location = new System.Drawing.Point(633, 345);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(99, 50);
-            this.btn_Return.TabIndex = 2;
+            this.btn_Return.TabIndex = 3;
             this.btn_Return.Text = "반납처리";
             this.btn_Return.UseVisualStyleBackColor = true;
             // 
