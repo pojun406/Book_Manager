@@ -59,5 +59,9 @@ namespace ProgramForm
             Conn.Close();
         }
 
+        private void LoginForm_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
