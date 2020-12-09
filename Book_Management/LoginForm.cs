@@ -38,17 +38,15 @@ namespace ProgramForm
                 {
                     MessageBox.Show("관리자 계정으로 접속합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     AdminForm adminForm = new AdminForm();
-                    LoginForm loginForm = new LoginForm();
                     adminForm.Show();
-                    loginForm.Close();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("로그인합니다.", "알림", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     UserForm userForm = new UserForm();
-                    LoginForm loginForm = new LoginForm();
                     userForm.Show();
-                    loginForm.Close();
+                    this.Hide();
                 }
             }
             else
@@ -57,6 +55,8 @@ namespace ProgramForm
             }
 
             Conn.Close();
+
+            
         }
 
         private void LoginForm_Load(object sender, EventArgs e)

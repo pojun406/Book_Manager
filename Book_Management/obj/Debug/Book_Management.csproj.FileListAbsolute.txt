@@ -46,10 +46,8 @@ C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\MySql.Dat
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csprojAssemblyReference.cache
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.exe.config
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.AdminForm.resources
-C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.BookManagement.resources
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.LoginForm.resources
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.Properties.Resources.resources
-C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.RentalUserList.resources
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.UserForm.resources
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.GenerateResource.cache
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CoreCompileInputs.cache

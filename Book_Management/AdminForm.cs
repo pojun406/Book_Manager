@@ -31,14 +31,12 @@ namespace ProgramForm
         //클릭 시 도서관리 창 오픈
         private void btnBookM_Click(object sender, EventArgs e)
         {
-            BookManagement bookManagement = new BookManagement();
-            bookManagement.Show();
+            
         }
         //클릭시 대출자 관리 창 오픈
         private void btnUserCheck_Click(object sender, EventArgs e)
         {
-            RentalUserList rentalUserList = new RentalUserList();
-            rentalUserList.Show();
+            
         }
 
         private void btnMake_Click(object sender, EventArgs e)
@@ -83,9 +81,9 @@ namespace ProgramForm
         {
             if (MessageBox.Show("로그아웃하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
-                AdminForm adminForm = new AdminForm();
+                
                 LoginForm loginForm = new LoginForm();
-                adminForm.Close();
+                this.Close();
                 loginForm.Show();
 
             }
