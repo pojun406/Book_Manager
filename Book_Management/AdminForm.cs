@@ -46,10 +46,27 @@ namespace ProgramForm
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
             string query = "INSERT INTO user (USER_NUM, USER_NAME, USER_P_NUM) value(USER_NUM + 1, '" + txt_Name.Text.Trim() + "' , '" + txt_Tel.Text.Trim() + "');";
-            MySqlDataAdapter adpt = new MySqlDataAdapter(query, Conn); // adapter로 쿼리 넘김
-            DataTable dt = new DataTable(); // dataTable 선언
+
             Conn.Open();
-            adpt.Fill(dt);
+            MySqlCommand cmd = new MySqlCommand(query, Conn);
+
+            try
+            {
+                if(cmd.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("값 들어감");
+                }
+                else
+                {
+                    MessageBox.Show("값 들어가기 실패");
+                }
+            }
+            catch(Exception exc)
+            {
+                MessageBox.Show(exc.Message);
+            }
+
+            Conn.Close();
         }
 
         private void data_UserManage_CellContentClick(object sender, DataGridViewCellEventArgs e)
