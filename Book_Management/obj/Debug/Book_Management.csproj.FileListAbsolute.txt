@@ -25,9 +25,11 @@ D:\Git\Book_Manager\Book_Management\bin\Debug\MySql.Data.xml
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CopyComplete
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.exe
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.pdb
+D:\Git\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.exe.config
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.exe
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.pdb
+C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\MySql.Data.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Google.Protobuf.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Zstandard.Net.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\K4os.Compression.LZ4.Streams.dll
@@ -41,7 +43,6 @@ C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\K4os.Hash
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\MySql.Data.xml
-C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csprojAssemblyReference.cache
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.exe.config
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.AdminForm.resources
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\ProgramForm.LoginForm.resources
@@ -52,4 +53,3 @@ C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Mana
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CopyComplete
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.exe
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\obj\Debug\Book_Management.pdb
-D:\Git\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll

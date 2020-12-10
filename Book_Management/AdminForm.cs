@@ -135,7 +135,7 @@ namespace ProgramForm
 
         }
 
-        private void btn_Search_Click(object sender, EventArgs e) // 도서 대출 조회
+        /*private void btn_Search_Click(object sender, EventArgs e) // 도서 대출 조회
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
@@ -153,7 +153,7 @@ namespace ProgramForm
             data_Rent.DataSource = ds;
             data_Rent.DataMember = rent_Table;
             Conn.Close();
-        }
+        }*/
 
         private void btn_SearchUser_Click(object sender, EventArgs e) // 유저 목록 datagrid에 출력
         {
@@ -175,9 +175,28 @@ namespace ProgramForm
 
         }
 
-        private void btn_searchrentallist_Click(object sender, EventArgs e)
+        private void btn_searchrentallist_Click(object sender, EventArgs e) // 도서대출조회(찐)
         {
+            string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+            MySqlConnection Conn = new MySqlConnection(myConnection);
+            string query = "SELECT L.BOOK_NUM, L.BOOK_NAME,R.RENT_NUM, R.RENT_DATE, R.RETURN_DATE, " 
+                + "R.USER_NUM , U.USER_NAME, L.BOOK_T_F FROM book_list L, book_rent R, user U "
+                + "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM  = U.USER_NUM";
 
+            string rent_Table = "book_list L, book_rent R, user U";
+            Conn.Open();
+
+            MySqlCommand cmd = new MySqlCommand(query, Conn);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds, rent_Table);
+
+            data_Rent.DataSource = ds;
+            data_Rent.DataMember = rent_Table;
+
+
+            Conn.Close();
         }
     }
 }
