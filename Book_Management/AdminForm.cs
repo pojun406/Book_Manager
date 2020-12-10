@@ -169,5 +169,15 @@ namespace ProgramForm
             data_UserManage.DataSource = ds;
             data_UserManage.DataMember = "user";
         }
+
+        private void btn_searchbooklist_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_searchrentallist_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
