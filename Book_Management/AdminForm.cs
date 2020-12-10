@@ -42,14 +42,23 @@ namespace ProgramForm
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
+            string refresh = "SELECT USER_NUM AS '유저 번호', USER_NAME AS '유저명', USER_P_NUM AS '핸드폰 번호' FROM user";
             string query = "INSERT INTO user (USER_NUM, USER_NAME, USER_P_NUM) value(USER_NUM, '" + txt_Name.Text.Trim() + "' , '" + txt_Tel.Text.Trim() + "');";
             Conn.Open();
+
             MySqlCommand cmd = new MySqlCommand(query, Conn);
 
             try
             {
-                if(cmd.ExecuteNonQuery() == 1)
+                if (cmd.ExecuteNonQuery() == 1)
                 {
+                    MySqlDataAdapter da = new MySqlDataAdapter(refresh, Conn);
+                    DataSet ds = new DataSet();
+                    da.Fill(ds, "user");
+
+                    data_UserManage.DataSource = ds;
+                    data_UserManage.DataMember = "user";
+
                     MessageBox.Show("유저 아이디 : " + txt_Name.Text + "   유저 핸드폰번호 : " + txt_Tel.Text);
                 }
                 else
@@ -65,15 +74,6 @@ namespace ProgramForm
             Conn.Close();
         }
 
-        private void data_UserManage_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void data_BookList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
 
         private void 로그아웃ToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -111,9 +111,11 @@ namespace ProgramForm
 
             try
             {
+
                 if (cmd.ExecuteNonQuery() == 1)
                 {
-                    MessageBox.Show("도서 번호 : " + txt_booknum.Text + "\r 도서 제목 : " + txt_bookname.Text + "\r 도서 장르 : " + txt_genre + "\r 도서 저자 : " + txt_writer);
+                    
+                    MessageBox.Show("도서 번호 : " + txt_booknum.Text + "\r 도서 제목 : " + txt_bookname.Text + "\r 도서 장르 : " + txt_genre.Text + "\r 도서 저자 : " + txt_writer.Text);
                 }
                 else
                 {
@@ -141,6 +143,7 @@ namespace ProgramForm
                 "FROM book_list L, book_rent R, user U" +
                 "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM = U.USER_NUM;";
             string rent_Table = "book_list L, book_rent R, user U";
+            Conn.Open();
             MySqlCommand cmd = new MySqlCommand(query, Conn);
 
             MySqlDataAdapter da = new MySqlDataAdapter(cmd);
@@ -149,6 +152,22 @@ namespace ProgramForm
 
             data_Rent.DataSource = ds;
             data_Rent.DataMember = rent_Table;
+            Conn.Close();
+        }
+
+        private void btn_SearchUser_Click(object sender, EventArgs e) // 유저 목록 datagrid에 출력
+        {
+            string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+            MySqlConnection Conn = new MySqlConnection(myConnection);
+            string query = "SELECT USER_NUM AS '유저 번호', USER_NAME AS '유저명', USER_P_NUM AS '핸드폰 번호' FROM user";
+
+            Conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(query, Conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "user");
+
+            data_UserManage.DataSource = ds;
+            data_UserManage.DataMember = "user";
         }
     }
 }
