@@ -132,5 +132,23 @@ namespace ProgramForm
         {
 
         }
+
+        private void btn_Search_Click(object sender, EventArgs e) // 도서 대출 조회
+        {
+            string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+            MySqlConnection Conn = new MySqlConnection(myConnection);
+            string query = "SELECT L.BOOK_NUM, L.BOOK_NAME,R.RENT_NUM, R.RENT_DATE, R.RETURN_DATE,R.USER_NUM , U.USER_NAME, L.BOOK_T_F" +
+                "FROM book_list L, book_rent R, user U" +
+                "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM = U.USER_NUM;";
+            string rent_Table = "book_list L, book_rent R, user U";
+            MySqlCommand cmd = new MySqlCommand(query, Conn);
+
+            MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+            DataSet ds = new DataSet();
+            da.Fill(ds);
+
+            data_Rent.DataSource = ds;
+            data_Rent.DataMember = rent_Table;
+        }
     }
 }

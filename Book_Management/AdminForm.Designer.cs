@@ -56,7 +56,7 @@
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_Search = new System.Windows.Forms.Button();
             this.btn_Return = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.data_Rent = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.로그아웃ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -70,7 +70,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_BookList)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Rent)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -305,9 +305,9 @@
             this.label6.AutoSize = true;
             this.label6.Location = new System.Drawing.Point(7, 61);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(39, 15);
+            this.label6.Size = new System.Drawing.Size(67, 15);
             this.label6.TabIndex = 0;
-            this.label6.Text = "ISBN";
+            this.label6.Text = "도서번호";
             // 
             // data_BookList
             // 
@@ -327,7 +327,7 @@
             this.tabPage3.Controls.Add(this.pictureBox2);
             this.tabPage3.Controls.Add(this.btn_Search);
             this.tabPage3.Controls.Add(this.btn_Return);
-            this.tabPage3.Controls.Add(this.dataGridView1);
+            this.tabPage3.Controls.Add(this.data_Rent);
             this.tabPage3.Location = new System.Drawing.Point(4, 25);
             this.tabPage3.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage3.Name = "tabPage3";
@@ -358,6 +358,7 @@
             this.btn_Search.TabIndex = 2;
             this.btn_Search.Text = "조회";
             this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
             // 
             // btn_Return
             // 
@@ -369,17 +370,17 @@
             this.btn_Return.Text = "반납처리";
             this.btn_Return.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // data_Rent
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(17, 19);
-            this.dataGridView1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(651, 475);
-            this.dataGridView1.TabIndex = 1;
+            this.data_Rent.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
+            this.data_Rent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.data_Rent.Location = new System.Drawing.Point(17, 19);
+            this.data_Rent.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.data_Rent.Name = "data_Rent";
+            this.data_Rent.RowHeadersWidth = 51;
+            this.data_Rent.RowTemplate.Height = 23;
+            this.data_Rent.Size = new System.Drawing.Size(651, 475);
+            this.data_Rent.TabIndex = 1;
             // 
             // menuStrip1
             // 
@@ -433,7 +434,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.data_BookList)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.data_Rent)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
@@ -465,7 +466,7 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txt_booknum;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView data_Rent;
         private System.Windows.Forms.Button btn_Return;
         private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.MenuStrip menuStrip1;
