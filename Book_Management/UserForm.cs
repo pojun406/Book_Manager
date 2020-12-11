@@ -23,6 +23,10 @@ namespace ProgramForm
             if (MessageBox.Show("로그아웃하시겠습니까?", "알림", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
+                LoginForm loginForm = new LoginForm();
+                this.Close();
+                loginForm.Show();
+
             }
         }
 

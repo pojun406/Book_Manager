@@ -62,6 +62,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.로그아웃ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.출력ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_UserManage)).BeginInit();
@@ -386,7 +387,8 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.로그아웃ToolStripMenuItem,
-            this.종료ToolStripMenuItem});
+            this.종료ToolStripMenuItem,
+            this.출력ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -406,6 +408,13 @@
             this.종료ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.종료ToolStripMenuItem.Text = "종료";
             this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
+            // 
+            // 출력ToolStripMenuItem
+            // 
+            this.출력ToolStripMenuItem.Name = "출력ToolStripMenuItem";
+            this.출력ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
+            this.출력ToolStripMenuItem.Text = "출력";
+            this.출력ToolStripMenuItem.Click += new System.EventHandler(this.출력ToolStripMenuItem_Click);
             // 
             // AdminForm
             // 
@@ -473,5 +482,6 @@
         private System.Windows.Forms.Button btn_SearchUser;
         private System.Windows.Forms.Button btn_searchbooklist;
         private System.Windows.Forms.Button btn_searchrentallist;
+        private System.Windows.Forms.ToolStripMenuItem 출력ToolStripMenuItem;
     }
 }
