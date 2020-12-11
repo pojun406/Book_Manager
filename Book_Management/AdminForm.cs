@@ -132,13 +132,44 @@ namespace ProgramForm
 
         private void btn_DelBook_Click(object sender, EventArgs e) // 도서 삭제 버튼
         {
-            if (this.data_BookList.SelectedRows.Count > 0)
+            for( int i = 0; i < data_BookList.Rows.Count-1; i++)
             {
-                data_BookList.Rows.RemoveAt(this.data_BookList.SelectedRows[0].Index);
-                string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
-                MySqlConnection Conn = new MySqlConnection(myConnection);
-                string query = "DELETE USER_NUM AS '유저 번호', USER_NAME AS '유저명', USER_P_NUM AS '핸드폰 번호' FROM user";
+                if(data_BookList.Rows[i].Selected == true)
+                {
+                    data_BookList.Rows.Remove(data_BookList.Rows[i]);
+                    string myConnection = "Server=localhost; port = 3307; Databas" +
+                        "e=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+                    MySqlConnection Conn = new MySqlConnection(myConnection);
+                    string refresh = "SELECT BOOK_NUM AS '도서 번호', BOOK_NAME AS '도서명', BOOK_GENRE AS '도서 장르', BOOK_WRITER AS '저자' FROM book_list";
+                    string select_Row_NUM = data_BookList.CurrentRow.Cells["도서 번호"].Value.ToString();
+                    string Delquery = "DELETE FROM book_list WHERE BOOK_NUM = '#NUM'";
+                    Delquery = Delquery.Replace("#NUM", select_Row_NUM);
+                    Conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(Delquery, Conn);
+                    try
+                    {
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            MySqlDataAdapter da = new MySqlDataAdapter(refresh, Conn);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, "book_list");
 
+                            data_UserManage.DataSource = ds;
+                            data_UserManage.DataMember = "book_list";
+                        }
+                        else
+                        {
+                            MessageBox.Show("삭제 실패");
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+
+                    Conn.Close();
+
+                }
             }
         }
 
