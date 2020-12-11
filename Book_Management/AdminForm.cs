@@ -93,8 +93,7 @@ namespace ProgramForm
                 if(data_BookList.Rows[i].Selected == true)
                 {
                     data_BookList.Rows.Remove(data_BookList.Rows[i]);
-                    string myConnection = "Server=localhost; port = 3307; Databas" +
-                        "e=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+                    string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
                     MySqlConnection Conn = new MySqlConnection(myConnection);
                     string refresh = "SELECT BOOK_NUM AS '도서 번호', BOOK_NAME AS '도서명', BOOK_GENRE AS '도서 장르', BOOK_WRITER AS '저자' FROM book_list";
                     string select_Row_NUM = data_BookList.CurrentRow.Cells["도서 번호"].Value.ToString();
@@ -150,6 +149,13 @@ namespace ProgramForm
 
         private void btnMake_Click(object sender, EventArgs e) // 유저 회원가입버튼
         {
+
+            if (txt_Name.Text == "" && txt_Tel.Text == "")
+            {
+                MessageBox.Show("빈칸은 못넣습니다.");
+                return;
+            }
+
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
             string refresh = "SELECT USER_NUM AS '유저 번호', USER_NAME AS '유저명', USER_P_NUM AS '핸드폰 번호' FROM user";
@@ -157,7 +163,7 @@ namespace ProgramForm
             Conn.Open();
 
             MySqlCommand cmd = new MySqlCommand(query, Conn);
-
+            
             try
             {
                 if (cmd.ExecuteNonQuery() == 1)
@@ -207,7 +213,7 @@ namespace ProgramForm
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
-            string query = "SELECT L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.RENT_NUM AS '대출 번호', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', L.BOOK_T_F AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
+            string query = "SELECT L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.RENT_NUM AS '대출 번호', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', IF(L.BOOK_T_F, '대여 가능', '대여 불가능') AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
                 + " FROM book_list L, book_rent R, user U "
                 + "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM  = U.USER_NUM";
 
