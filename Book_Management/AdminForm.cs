@@ -132,10 +132,17 @@ namespace ProgramForm
 
         private void btn_DelBook_Click(object sender, EventArgs e) // 도서 삭제 버튼
         {
+            if (this.data_BookList.SelectedRows.Count > 0)
+            {
+                data_BookList.Rows.RemoveAt(this.data_BookList.SelectedRows[0].Index);
+                string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+                MySqlConnection Conn = new MySqlConnection(myConnection);
+                string query = "DELETE USER_NUM AS '유저 번호', USER_NAME AS '유저명', USER_P_NUM AS '핸드폰 번호' FROM user";
 
+            }
         }
 
-        /*private void btn_Search_Click(object sender, EventArgs e) // 도서 대출 조회
+        /*private void btn_Search_Click(object sender, EventArgs e) // 도서 대출 조회 (안돼는 코드)
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
@@ -155,7 +162,7 @@ namespace ProgramForm
             Conn.Close();
         }*/
 
-        private void btn_SearchUser_Click(object sender, EventArgs e) // 유저 목록 datagrid에 출력
+        private void btn_SearchUser_Click(object sender, EventArgs e) // 유저 리스트 datagrid에 출력
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
@@ -170,17 +177,26 @@ namespace ProgramForm
             data_UserManage.DataMember = "user";
         }
 
-        private void btn_searchbooklist_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void btn_searchrentallist_Click(object sender, EventArgs e) // 도서대출조회(찐)
+        private void btn_searchbooklist_Click(object sender, EventArgs e) // 도서 리스트 datagrid에 출력
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
-            string query = "SELECT L.BOOK_NUM, L.BOOK_NAME,R.RENT_NUM, R.RENT_DATE, R.RETURN_DATE, " 
-                + "R.USER_NUM , U.USER_NAME, L.BOOK_T_F FROM book_list L, book_rent R, user U "
+            string query = "SELECT BOOK_NUM AS '도서 번호', BOOK_NAME AS '도서 명', BOOK_GENRE AS '도서 장르', BOOK_WRITER AS '저자' FROM book_list";
+
+            Conn.Open();
+            MySqlDataAdapter da = new MySqlDataAdapter(query, Conn);
+            DataSet ds = new DataSet();
+            da.Fill(ds, "book_list");
+
+            data_BookList.DataSource = ds;
+            data_BookList.DataMember = "book_list";
+        }
+        private void btn_searchrentallist_Click(object sender, EventArgs e) // 대출 리스트 datagrid에 출력
+        {
+            string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+            MySqlConnection Conn = new MySqlConnection(myConnection);
+            string query = "SELECT L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.RENT_NUM AS '대출 번호', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', L.BOOK_T_F AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
+                + " FROM book_list L, book_rent R, user U "
                 + "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM  = U.USER_NUM";
 
             string rent_Table = "book_list L, book_rent R, user U";
