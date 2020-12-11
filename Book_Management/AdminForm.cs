@@ -28,6 +28,13 @@ namespace ProgramForm
         //클릭시 대출자 관리 창 오픈
         private void btnUserCheck_Click(object sender, EventArgs e) { }
 
+        //------------------------------------------------------------------------------------------------------------
+
+        private void 출력ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
         private void 로그아웃ToolStripMenuItem_Click(object sender, EventArgs e)
@@ -213,7 +220,7 @@ namespace ProgramForm
         {
             string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
             MySqlConnection Conn = new MySqlConnection(myConnection);
-            string query = "SELECT L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.RENT_NUM AS '대출 번호', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', IF(L.BOOK_T_F, '대여 가능', '대여 불가능') AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
+            string query = "SELECT R.RENT_NUM AS '대출 번호', L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', IF(L.BOOK_T_F, '대여 가능', '대여 불가능') AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
                 + " FROM book_list L, book_rent R, user U "
                 + "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM  = U.USER_NUM";
 
@@ -237,13 +244,48 @@ namespace ProgramForm
 
         private void btn_Return_Click(object sender, EventArgs e) // 대출 반납처리
         {
+            for (int i = 0; i < data_BookList.Rows.Count - 1; i++)
+            {
+                if (data_BookList.Rows[i].Selected == true)
+                {
+                    data_BookList.Rows.Remove(data_BookList.Rows[i]);
+                    string myConnection = "Server=localhost; port = 3307; Database=book_management; User ID=root;Password=123123;CHARSET=utf8"; // DB정보
+                    MySqlConnection Conn = new MySqlConnection(myConnection);
+                    string refresh = "SELECT R.RENT_NUM AS '대출 번호', L.BOOK_NUM AS '도서 번호', L.BOOK_NAME AS '도서 이름', R.USER_NUM AS '유저 번호', U.USER_NAME AS '유저 이름', IF(L.BOOK_T_F, '대여 가능', '대여 불가능') AS '대출 유무', R.RENT_DATE AS '대여일', R.RETURN_DATE AS '반납일'"/*별칭 설정완료*/
+                + " FROM book_list L, book_rent R, user U "
+                + "WHERE L.BOOK_NUM = R.BOOK_NUM AND R.USER_NUM  = U.USER_NUM";
+                    string select_Row_NUM = data_BookList.CurrentRow.Cells["대출 유무"].Value.ToString();
+                    string Delquery = "UPDATE book_list SET BOOK_T_F = '1' WHERE " + select_Row_NUM;
+                    string rent_Table = "book_list L, book_rent R, user U";
+                    Conn.Open();
+                    MySqlCommand cmd = new MySqlCommand(Delquery, Conn);
+                    try
+                    {
+                        if (cmd.ExecuteNonQuery() == 1)
+                        {
+                            MySqlDataAdapter da = new MySqlDataAdapter(refresh, Conn);
+                            DataSet ds = new DataSet();
+                            da.Fill(ds, rent_Table);
 
+                            data_UserManage.DataSource = ds;
+                            data_UserManage.DataMember = rent_Table;
+                        }
+                        else
+                        {
+                            MessageBox.Show("반납 실패");
+                        }
+                    }
+                    catch (Exception exc)
+                    {
+                        MessageBox.Show(exc.Message);
+                    }
+
+                    Conn.Close();
+
+                }
+            }
         }
 
-        private void 출력ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
-        }
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
