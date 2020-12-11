@@ -42,6 +42,7 @@
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.btn_searchbooklist = new System.Windows.Forms.Button();
             this.btn_DelBook = new System.Windows.Forms.Button();
             this.btn_AddBook = new System.Windows.Forms.Button();
             this.txt_writer = new System.Windows.Forms.TextBox();
@@ -54,14 +55,13 @@
             this.label6 = new System.Windows.Forms.Label();
             this.data_BookList = new System.Windows.Forms.DataGridView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.btn_searchrentallist = new System.Windows.Forms.Button();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.btn_Return = new System.Windows.Forms.Button();
             this.data_Rent = new System.Windows.Forms.DataGridView();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.로그아웃ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.btn_searchbooklist = new System.Windows.Forms.Button();
-            this.btn_searchrentallist = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_UserManage)).BeginInit();
@@ -182,7 +182,7 @@
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
-            this.tabPage1.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage1.Size = new System.Drawing.Size(773, 411);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "기본관리";
@@ -194,7 +194,7 @@
             this.tabPage2.Controls.Add(this.data_BookList);
             this.tabPage2.Location = new System.Drawing.Point(4, 22);
             this.tabPage2.Name = "tabPage2";
-            this.tabPage2.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage2.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage2.Size = new System.Drawing.Size(773, 411);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "도서관리";
@@ -219,6 +219,16 @@
             this.groupBox2.TabIndex = 2;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "도서목록관리";
+            // 
+            // btn_searchbooklist
+            // 
+            this.btn_searchbooklist.Location = new System.Drawing.Point(234, 156);
+            this.btn_searchbooklist.Name = "btn_searchbooklist";
+            this.btn_searchbooklist.Size = new System.Drawing.Size(110, 43);
+            this.btn_searchbooklist.TabIndex = 8;
+            this.btn_searchbooklist.Text = "조회";
+            this.btn_searchbooklist.UseVisualStyleBackColor = true;
+            this.btn_searchbooklist.Click += new System.EventHandler(this.btn_searchbooklist_Click);
             // 
             // btn_DelBook
             // 
@@ -323,11 +333,21 @@
             this.tabPage3.Controls.Add(this.data_Rent);
             this.tabPage3.Location = new System.Drawing.Point(4, 22);
             this.tabPage3.Name = "tabPage3";
-            this.tabPage3.Padding = new System.Windows.Forms.Padding(3, 3, 3, 3);
+            this.tabPage3.Padding = new System.Windows.Forms.Padding(3);
             this.tabPage3.Size = new System.Drawing.Size(773, 411);
             this.tabPage3.TabIndex = 2;
             this.tabPage3.Text = "대출관리";
             this.tabPage3.UseVisualStyleBackColor = true;
+            // 
+            // btn_searchrentallist
+            // 
+            this.btn_searchrentallist.Location = new System.Drawing.Point(633, 268);
+            this.btn_searchrentallist.Name = "btn_searchrentallist";
+            this.btn_searchrentallist.Size = new System.Drawing.Size(99, 50);
+            this.btn_searchrentallist.TabIndex = 5;
+            this.btn_searchrentallist.Text = "조회";
+            this.btn_searchrentallist.UseVisualStyleBackColor = true;
+            this.btn_searchrentallist.Click += new System.EventHandler(this.btn_searchrentallist_Click);
             // 
             // pictureBox2
             // 
@@ -348,6 +368,7 @@
             this.btn_Return.TabIndex = 3;
             this.btn_Return.Text = "반납처리";
             this.btn_Return.UseVisualStyleBackColor = true;
+            this.btn_Return.Click += new System.EventHandler(this.btn_Return_Click);
             // 
             // data_Rent
             // 
@@ -385,26 +406,6 @@
             this.종료ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.종료ToolStripMenuItem.Text = "종료";
             this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
-            // 
-            // btn_searchbooklist
-            // 
-            this.btn_searchbooklist.Location = new System.Drawing.Point(234, 156);
-            this.btn_searchbooklist.Name = "btn_searchbooklist";
-            this.btn_searchbooklist.Size = new System.Drawing.Size(110, 43);
-            this.btn_searchbooklist.TabIndex = 8;
-            this.btn_searchbooklist.Text = "조회";
-            this.btn_searchbooklist.UseVisualStyleBackColor = true;
-            this.btn_searchbooklist.Click += new System.EventHandler(this.btn_searchbooklist_Click);
-            // 
-            // btn_searchrentallist
-            // 
-            this.btn_searchrentallist.Location = new System.Drawing.Point(633, 268);
-            this.btn_searchrentallist.Name = "btn_searchrentallist";
-            this.btn_searchrentallist.Size = new System.Drawing.Size(99, 50);
-            this.btn_searchrentallist.TabIndex = 5;
-            this.btn_searchrentallist.Text = "조회";
-            this.btn_searchrentallist.UseVisualStyleBackColor = true;
-            this.btn_searchrentallist.Click += new System.EventHandler(this.btn_searchrentallist_Click);
             // 
             // AdminForm
             // 

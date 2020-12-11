@@ -33,7 +33,6 @@
             this.cbox_Category = new System.Windows.Forms.ComboBox();
             this.txt_search = new System.Windows.Forms.TextBox();
             this.btn_Rental = new System.Windows.Forms.Button();
-            this.btn_Search = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -41,6 +40,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.로그아웃ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.btn_Search = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.data_booklist)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -74,22 +74,13 @@
             // 
             // btn_Rental
             // 
-            this.btn_Rental.Location = new System.Drawing.Point(619, 341);
+            this.btn_Rental.Location = new System.Drawing.Point(619, 318);
             this.btn_Rental.Name = "btn_Rental";
             this.btn_Rental.Size = new System.Drawing.Size(99, 55);
             this.btn_Rental.TabIndex = 4;
             this.btn_Rental.Text = "대출";
             this.btn_Rental.UseVisualStyleBackColor = true;
-            // 
-            // btn_Search
-            // 
-            this.btn_Search.Location = new System.Drawing.Point(619, 234);
-            this.btn_Search.Name = "btn_Search";
-            this.btn_Search.Size = new System.Drawing.Size(99, 55);
-            this.btn_Search.TabIndex = 3;
-            this.btn_Search.Text = "조회";
-            this.btn_Search.UseVisualStyleBackColor = true;
-            this.btn_Search.Click += new System.EventHandler(this.button1_Click);
+            this.btn_Rental.Click += new System.EventHandler(this.btn_Rental_Click);
             // 
             // label1
             // 
@@ -111,10 +102,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.btn_Search);
             this.groupBox1.Controls.Add(this.btn_Rental);
             this.groupBox1.Controls.Add(this.txt_search);
             this.groupBox1.Controls.Add(this.cbox_Category);
@@ -161,6 +152,16 @@
             this.종료ToolStripMenuItem.Text = "종료";
             this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
             // 
+            // btn_Search
+            // 
+            this.btn_Search.Location = new System.Drawing.Point(619, 237);
+            this.btn_Search.Name = "btn_Search";
+            this.btn_Search.Size = new System.Drawing.Size(99, 55);
+            this.btn_Search.TabIndex = 9;
+            this.btn_Search.Text = "조회";
+            this.btn_Search.UseVisualStyleBackColor = true;
+            this.btn_Search.Click += new System.EventHandler(this.btn_Search_Click);
+            // 
             // UserForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -190,7 +191,6 @@
         private System.Windows.Forms.ComboBox cbox_Category;
         private System.Windows.Forms.TextBox txt_search;
         private System.Windows.Forms.Button btn_Rental;
-        private System.Windows.Forms.Button btn_Search;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
@@ -198,5 +198,6 @@
         private System.Windows.Forms.ToolStripMenuItem 로그아웃ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 종료ToolStripMenuItem;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Button btn_Search;
     }
 }
