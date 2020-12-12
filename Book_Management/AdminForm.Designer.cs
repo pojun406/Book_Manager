@@ -31,12 +31,12 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.btn_SearchUser = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.btnMake = new System.Windows.Forms.Button();
             this.txt_Tel = new System.Windows.Forms.TextBox();
             this.txt_Name = new System.Windows.Forms.TextBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.data_UserManage = new System.Windows.Forms.DataGridView();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -62,7 +62,6 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.로그아웃ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.종료ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.출력ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.data_UserManage)).BeginInit();
@@ -80,62 +79,56 @@
             // groupBox1
             // 
             this.groupBox1.Controls.Add(this.btn_SearchUser);
-            this.groupBox1.Controls.Add(this.pictureBox1);
             this.groupBox1.Controls.Add(this.label3);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.btnMake);
             this.groupBox1.Controls.Add(this.txt_Tel);
             this.groupBox1.Controls.Add(this.txt_Name);
+            this.groupBox1.Font = new System.Drawing.Font("닉스곤체 M 2.0", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox1.Location = new System.Drawing.Point(389, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(366, 387);
+            this.groupBox1.Size = new System.Drawing.Size(366, 164);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "USER 가입창";
             // 
             // btn_SearchUser
             // 
-            this.btn_SearchUser.Location = new System.Drawing.Point(276, 108);
+            this.btn_SearchUser.Font = new System.Drawing.Font("레시피코리아 Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btn_SearchUser.Location = new System.Drawing.Point(254, 93);
             this.btn_SearchUser.Name = "btn_SearchUser";
-            this.btn_SearchUser.Size = new System.Drawing.Size(60, 35);
+            this.btn_SearchUser.Size = new System.Drawing.Size(90, 49);
             this.btn_SearchUser.TabIndex = 5;
             this.btn_SearchUser.Text = "조회";
             this.btn_SearchUser.UseVisualStyleBackColor = true;
             this.btn_SearchUser.Click += new System.EventHandler(this.btn_SearchUser_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = global::Book_Management.Properties.Resources.Library_2_icon;
-            this.pictureBox1.Location = new System.Drawing.Point(32, 154);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(216, 217);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 4;
-            this.pictureBox1.TabStop = false;
-            // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(30, 101);
+            this.label3.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label3.Location = new System.Drawing.Point(28, 81);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(69, 12);
+            this.label3.Size = new System.Drawing.Size(91, 21);
             this.label3.TabIndex = 4;
             this.label3.Text = "핸드폰 번호";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(30, 52);
+            this.label2.Font = new System.Drawing.Font("레시피코리아 Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label2.Location = new System.Drawing.Point(28, 49);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(29, 12);
+            this.label2.Size = new System.Drawing.Size(47, 24);
             this.label2.TabIndex = 3;
             this.label2.Text = "이름";
             // 
             // btnMake
             // 
-            this.btnMake.Location = new System.Drawing.Point(276, 59);
+            this.btnMake.Font = new System.Drawing.Font("레시피코리아 Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.btnMake.Location = new System.Drawing.Point(254, 34);
             this.btnMake.Name = "btnMake";
-            this.btnMake.Size = new System.Drawing.Size(60, 35);
+            this.btnMake.Size = new System.Drawing.Size(90, 53);
             this.btnMake.TabIndex = 4;
             this.btnMake.Text = "등록";
             this.btnMake.UseVisualStyleBackColor = true;
@@ -143,17 +136,29 @@
             // 
             // txt_Tel
             // 
-            this.txt_Tel.Location = new System.Drawing.Point(32, 116);
+            this.txt_Tel.Font = new System.Drawing.Font("레시피코리아 Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_Tel.Location = new System.Drawing.Point(32, 105);
             this.txt_Tel.Name = "txt_Tel";
-            this.txt_Tel.Size = new System.Drawing.Size(216, 21);
+            this.txt_Tel.Size = new System.Drawing.Size(216, 32);
             this.txt_Tel.TabIndex = 3;
             // 
             // txt_Name
             // 
-            this.txt_Name.Location = new System.Drawing.Point(32, 67);
+            this.txt_Name.Font = new System.Drawing.Font("레시피코리아 Medium", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_Name.Location = new System.Drawing.Point(81, 46);
             this.txt_Name.Name = "txt_Name";
-            this.txt_Name.Size = new System.Drawing.Size(216, 21);
+            this.txt_Name.Size = new System.Drawing.Size(158, 32);
             this.txt_Name.TabIndex = 2;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Book_Management.Properties.Resources.Library_2_icon;
+            this.pictureBox1.Location = new System.Drawing.Point(389, 178);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(216, 217);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 4;
+            this.pictureBox1.TabStop = false;
             // 
             // data_UserManage
             // 
@@ -180,6 +185,7 @@
             // tabPage1
             // 
             this.tabPage1.Controls.Add(this.data_UserManage);
+            this.tabPage1.Controls.Add(this.pictureBox1);
             this.tabPage1.Controls.Add(this.groupBox1);
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
@@ -214,6 +220,7 @@
             this.groupBox2.Controls.Add(this.label5);
             this.groupBox2.Controls.Add(this.txt_booknum);
             this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Font = new System.Drawing.Font("닉스곤체 M 2.0", 15.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.groupBox2.Location = new System.Drawing.Point(390, 8);
             this.groupBox2.Name = "groupBox2";
             this.groupBox2.Size = new System.Drawing.Size(350, 387);
@@ -253,65 +260,73 @@
             // 
             // txt_writer
             // 
-            this.txt_writer.Location = new System.Drawing.Point(6, 325);
+            this.txt_writer.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_writer.Location = new System.Drawing.Point(6, 316);
             this.txt_writer.Name = "txt_writer";
-            this.txt_writer.Size = new System.Drawing.Size(208, 21);
+            this.txt_writer.Size = new System.Drawing.Size(208, 28);
             this.txt_writer.TabIndex = 5;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(6, 310);
+            this.label4.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label4.Location = new System.Drawing.Point(6, 292);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(29, 12);
+            this.label4.Size = new System.Drawing.Size(42, 21);
             this.label4.TabIndex = 6;
             this.label4.Text = "저자";
             // 
             // txt_genre
             // 
-            this.txt_genre.Location = new System.Drawing.Point(6, 245);
+            this.txt_genre.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_genre.Location = new System.Drawing.Point(6, 233);
             this.txt_genre.Name = "txt_genre";
-            this.txt_genre.Size = new System.Drawing.Size(208, 21);
+            this.txt_genre.Size = new System.Drawing.Size(208, 28);
             this.txt_genre.TabIndex = 4;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(4, 230);
+            this.label1.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label1.Location = new System.Drawing.Point(6, 209);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(29, 12);
+            this.label1.Size = new System.Drawing.Size(41, 21);
             this.label1.TabIndex = 4;
             this.label1.Text = "장르";
             // 
             // txt_bookname
             // 
-            this.txt_bookname.Location = new System.Drawing.Point(6, 168);
+            this.txt_bookname.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_bookname.Location = new System.Drawing.Point(6, 68);
             this.txt_bookname.Name = "txt_bookname";
-            this.txt_bookname.Size = new System.Drawing.Size(208, 21);
+            this.txt_bookname.Size = new System.Drawing.Size(338, 28);
             this.txt_bookname.TabIndex = 3;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(6, 153);
+            this.label5.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label5.Location = new System.Drawing.Point(6, 44);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(41, 12);
+            this.label5.Size = new System.Drawing.Size(57, 21);
             this.label5.TabIndex = 2;
             this.label5.Text = "도서명";
             // 
             // txt_booknum
             // 
-            this.txt_booknum.Location = new System.Drawing.Point(6, 87);
+            this.txt_booknum.Font = new System.Drawing.Font("레시피코리아 Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.txt_booknum.Location = new System.Drawing.Point(6, 156);
             this.txt_booknum.Name = "txt_booknum";
-            this.txt_booknum.Size = new System.Drawing.Size(338, 21);
+            this.txt_booknum.Size = new System.Drawing.Size(83, 27);
             this.txt_booknum.TabIndex = 2;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 72);
+            this.label6.Font = new System.Drawing.Font("레시피코리아 Medium", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.label6.Location = new System.Drawing.Point(6, 134);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(53, 12);
+            this.label6.Size = new System.Drawing.Size(67, 19);
             this.label6.TabIndex = 0;
             this.label6.Text = "도서번호";
             // 
@@ -342,6 +357,7 @@
             // 
             // btn_searchrentallist
             // 
+            this.btn_searchrentallist.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_searchrentallist.Location = new System.Drawing.Point(633, 268);
             this.btn_searchrentallist.Name = "btn_searchrentallist";
             this.btn_searchrentallist.Size = new System.Drawing.Size(99, 50);
@@ -363,6 +379,7 @@
             // 
             // btn_Return
             // 
+            this.btn_Return.Font = new System.Drawing.Font("레시피코리아 Medium", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.btn_Return.Location = new System.Drawing.Point(633, 345);
             this.btn_Return.Name = "btn_Return";
             this.btn_Return.Size = new System.Drawing.Size(99, 50);
@@ -387,8 +404,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.로그아웃ToolStripMenuItem,
-            this.종료ToolStripMenuItem,
-            this.출력ToolStripMenuItem});
+            this.종료ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(784, 24);
@@ -408,13 +424,6 @@
             this.종료ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
             this.종료ToolStripMenuItem.Text = "종료";
             this.종료ToolStripMenuItem.Click += new System.EventHandler(this.종료ToolStripMenuItem_Click);
-            // 
-            // 출력ToolStripMenuItem
-            // 
-            this.출력ToolStripMenuItem.Name = "출력ToolStripMenuItem";
-            this.출력ToolStripMenuItem.Size = new System.Drawing.Size(43, 20);
-            this.출력ToolStripMenuItem.Text = "출력";
-            this.출력ToolStripMenuItem.Click += new System.EventHandler(this.출력ToolStripMenuItem_Click);
             // 
             // AdminForm
             // 
@@ -482,6 +491,5 @@
         private System.Windows.Forms.Button btn_SearchUser;
         private System.Windows.Forms.Button btn_searchbooklist;
         private System.Windows.Forms.Button btn_searchrentallist;
-        private System.Windows.Forms.ToolStripMenuItem 출력ToolStripMenuItem;
     }
 }

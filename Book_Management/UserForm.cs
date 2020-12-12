@@ -102,5 +102,6 @@ namespace ProgramForm
             cbox_Category.Items.Add("저자");
             cbox_Category.SelectedIndex = 0;
         }
+
     }
 }
