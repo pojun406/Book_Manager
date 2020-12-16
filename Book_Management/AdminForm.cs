@@ -95,7 +95,7 @@ namespace ProgramForm
 
         private void btn_DelBook_Click(object sender, EventArgs e) // 도서 삭제 버튼
         {
-            for( int i = 0; i < data_BookList.Rows.Count-1; i++)
+            for( int i = 0; i < data_BookList.Rows.Count; i++)
             {
                 if(data_BookList.Rows[i].Selected == true)
                 {
@@ -242,7 +242,7 @@ namespace ProgramForm
 
         //-------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-        private void btn_Return_Click(object sender, EventArgs e) // 대출 반납처리
+        private void btn_Return_Click(object sender, EventArgs e) // 대출 반납처리 -- 안됌
         {
             for (int i = 0; i < data_BookList.Rows.Count - 1; i++)
             {

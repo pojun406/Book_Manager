@@ -25,7 +25,6 @@ D:\Git\Book_Manager\Book_Management\bin\Debug\MySql.Data.xml
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.csproj.CopyComplete
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.exe
 D:\Git\Book_Manager\Book_Management\obj\Debug\Book_Management.pdb
-D:\Git\Book_Manager\Book_Management\bin\Debug\System.Numerics.Vectors.dll
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.exe.config
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.exe
 C:\Users\fusta\Documents\GitHub\Book_Manager\Book_Management\bin\Debug\Book_Management.pdb
